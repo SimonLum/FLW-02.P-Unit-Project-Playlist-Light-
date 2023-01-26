@@ -45,6 +45,7 @@ h1 {
 .display-artist p {
   font-size: 18px;
   height: 100px;
+  margin: 10px;
   
 }
 
@@ -82,4 +83,10 @@ color: white;
 
 h4{
   color: white;
+}
+
+img{
+  border-style:solid;
+  border-color:black;
+  border-width: 5px;
 }

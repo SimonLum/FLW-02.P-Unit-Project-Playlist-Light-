@@ -20,9 +20,10 @@ let linkDisplay = document.querySelector(".display-link");
 
 // task 7: create and populate an array to store your image urls. Create three more arrays. One to store your song names, one for the artists, and a last one for the song links.
 
-let img = ["https://i.scdn.co/image/ab67616d0000b2739e16930796a07f1195002389" , "https://i.scdn.co/image/ab67616d0000b27302efe8b445f10fb0f0b84126" , "https://upload.wikimedia.org/wikipedia/en/f/f4/Kenshi_Yonezu_-_Kick_Back.png" , "https://static.wikia.nocookie.net/devilmaycry/images/0/0a/DMC5_Devil_Trigger.jpg/revision/latest?cb=20190424163453" , "https://i.scdn.co/image/ab67616d0000b273572fc10e3f67907bd2bff986"];
+let img = ["https://i.scdn.co/image/ab67616d0000b2739e16930796a07f1195002389" , "https://i.scdn.co/image/ab67616d0000b27302efe8b445f10fb0f0b84126" , "https://upload.wikimedia.org/wikipedia/en/f/f4/Kenshi_Yonezu_-_Kick_Back.png" , "https://i1.sndcdn.com/artworks-000502276371-7jfxvy-t500x500.jpg" , "https://i.scdn.co/image/ab67616d0000b273572fc10e3f67907bd2bff986"];
 let songTitle = ["Matsuri" , "Nisemonoyusya" , "KICK BACK" , "Devil Trigger" , "Other Side"];
-let artistName = [];
+let artistName = ["Fujii Kaze" , "703goushitsu" , "Kenshi Yonezu" , "Casey Edwards" , "MIYAVI"];
+let songLinks = ["https://www.youtube.com/watch?v=OzjpdQZQZtE" , "https://www.youtube.com/watch?v=hM4f37uRyKc" , "https://www.youtube.com/watch?v=zoNJ6HOt3zw" , "https://www.youtube.com/watch?v=-WpnPSChVRQ" , "https://www.youtube.com/watch?v=15FKY0uXro0"];
 
 
 
@@ -71,9 +72,21 @@ function emptyDisplay() {
 function displaySongInfo() {
 
 // task 8: loop through your images array and display the images to your songs in the correct div. Create three more loops. One for the song names, one for the artists, and a last one for the song links.
+  for (let i = 0; i < img.length;i++) {
+    imgDisplay.insertAdjacentHTML("beforeend" , `<p><img src="${img[i]}"></p>`)
+  }
+  
+for (let i = 0; i < songTitle.length;i++) {
+    songDisplay.insertAdjacentHTML("beforeend" , `<p>${songTitle[i]}</p>`)
+  }
 
-
-
+for (let i = 0; i < artistName.length;i++) {
+    artistDisplay.insertAdjacentHTML("beforeend" , `<p>${artistName[i]}</p>`)
+  }
+  
+  for (let i = 0; i < songLinks.length;i++) {
+    linkDisplay.insertAdjacentHTML("beforeend" , `<p><a href="${songLinks[i]}" target="_blank">Song Here!</a></p>`)
+  }
 }
 
 
