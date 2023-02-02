@@ -49,10 +49,18 @@ let songLinks = ["https://www.youtube.com/watch?v=OzjpdQZQZtE" , "https://www.yo
 function addSongInfo() {
 
 // task 9: declare a variable to save the user input of the image url. Declare three more variables that save user input: One for the song names, one for the artists, and a last one for the song links.
+  let imgInput = image.value;
+  let songInput = songName.value;
+  let artistInput = artist.value;
+  let linkInput = songLink.value;
 
 
 // task 10: use `.push()` to add each input value to the correct array.
-
+  img.push(imgInput);
+  songTitle.push(songInput);
+  artistName.push(artistInput);
+  songLinks.push(linkInput);
+  
 }
 
 
@@ -60,10 +68,10 @@ function addSongInfo() {
 
 /******** this function empties the display divs each time the button is clicked so that your playlist does not repeatedly add the data too many times. Where should this function be placed???********/
 function emptyDisplay() {
-  displayImage.innerHTML = "";
-  displaySong.innerHTML = "";
-  displayArtist.innerHTML = "";
-  displayLink.innerHTML = "";
+  imgDisplay.innerHTML = "";
+  songDisplay.innerHTML = "";
+  artistDisplay.innerHTML = "";
+  linkDisplay.innerHTML = "";
 }
 
 
@@ -96,6 +104,7 @@ for (let i = 0; i < artistName.length;i++) {
 // click event to add and display songs
 add.onclick = function() {
   addSongInfo();
+  emptyDisplay();
   displaySongInfo();
 };
 
