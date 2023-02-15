@@ -34,8 +34,38 @@ let songLinks = ["https://www.youtube.com/watch?v=OzjpdQZQZtE" , "https://www.yo
 // task 12: create an object for each of your songs.
 // task 13: inside each object, add key/value pairs to store the image url, song name, artist, and song link.
 // task 14: create an array that stores all of the objects.
-
-
+let Matsuri = {
+  songName: "Matsuri",
+  songArtist: "Fujii Kaze",
+  songUrl: "https://i.scdn.co/image/ab67616d0000b2739e16930796a07f1195002389",
+  musicLink:"https://www.youtube.com/watch?v=OzjpdQZQZtE"
+};
+let Nisemonoyusya = {
+  songName: "Nisemonoyusya",
+  songArtist: "703goushitsu",
+songUrl:"https://i.scdn.co/image/ab67616d0000b27302efe8b445f10fb0f0b84126",
+  musicLink:"https://www.youtube.com/watch?v=hM4f37uRyKc"
+};
+let KICKBACK = {
+    songName: "KICK BACK",
+  songArtist: "Kenshi Yonezu",
+songUrl:"https://upload.wikimedia.org/wikipedia/en/f/f4/Kenshi_Yonezu_-_Kick_Back.png",
+  musicLink:"https://www.youtube.com/watch?v=zoNJ6HOt3zw"
+};
+let DevilTrigger = {
+      songName: "Devil Trigger",
+  songArtist: "Casey Edwards",
+songUrl:"https://i1.sndcdn.com/artworks-000502276371-7jfxvy-t500x500.jpg",
+  musicLink:"https://www.youtube.com/watch?v=-WpnPSChVRQ"
+};
+let OtherSide = {
+   songName: "Other Side",
+  songArtist: "MIYAVI",
+songUrl:"https://i.scdn.co/image/ab67616d0000b273572fc10e3f67907bd2bff986",
+  musicLink:"https://www.youtube.com/watch?v=15FKY0uXro0"
+};
+let refactorSongs = [Matsuri , Nisemonoyusya , KICKBACK , DevilTrigger , OtherSide];
+console.log(refactorSongs);
 
 //REFACTOR LOOPS DAY 
 // task 15: update your `addSongInfo` function so the input values are saved in as values in a new object.
