@@ -65,7 +65,7 @@ songUrl:"https://i.scdn.co/image/ab67616d0000b273572fc10e3f67907bd2bff986",
   musicLink:"https://www.youtube.com/watch?v=15FKY0uXro0"
 };
 let songList = [song0 , song1 , song2 , song3 , song4];
-console.log(songList);
+//console.log(songList);
 
 //REFACTOR LOOPS DAY 
 // task 15: update your `addSongInfo` function so the input values are saved in as values in a new object.
@@ -120,7 +120,7 @@ function emptyDisplay() {
 function displaySongInfo() {
 
 // task 8: loop through your images array and display the images to your songs in the correct div. Create three more loops. One for the song names, one for the artists, and a last one for the song links.
-  for (let i = 0; i < songList.length;i++) {
+  /*for (let i = 0; i < songList.length;i++) {
     imgDisplay.insertAdjacentHTML("beforeend" , `<p><img src="${songList[i].songUrl}"></p>`)
   }
   
@@ -133,6 +133,15 @@ for (let i = 0; i < songList.length;i++) {
   }
   
   for (let i = 0; i < songList.length;i++) {
+    linkDisplay.insertAdjacentHTML("beforeend" , `<p><a href="${songList[i].musicLink}" target="_blank">Song Here!</a></p>`)
+  }*/
+  for (let i = 0; i < songList.length;i++) {
+    imgDisplay.insertAdjacentHTML("beforeend" , `<p><img src="${songList[i].songUrl}"></p>`)
+    
+    songDisplay.insertAdjacentHTML("beforeend" , `<p>${songList[i].songName}</p>`)
+    
+    artistDisplay.insertAdjacentHTML("beforeend" , `<p>${songList[i].songArtist}</p>`)
+
     linkDisplay.insertAdjacentHTML("beforeend" , `<p><a href="${songList[i].musicLink}" target="_blank">Song Here!</a></p>`)
   }
 }
